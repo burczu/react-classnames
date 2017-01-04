@@ -1,9 +1,13 @@
 import React from 'react';
 
-const ChildComponent = () => {
+import '../styles/Child.css';
+
+const ChildComponent = (props) => {
+  const errClass = props.isError ? 'error' : '';
+
   return (
     <div>
-      <p>Hello!</p>
+      <p className={errClass}>Hello!</p>
     </div>
   );
 };
