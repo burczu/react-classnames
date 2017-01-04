@@ -1,9 +1,13 @@
 import React from 'react';
+import classNames from 'classnames';
 
 import '../styles/Child.css';
 
 const ChildComponent = (props) => {
-  const errClass = props.isError ? 'error' : '';
+  const errClass = classNames({
+    'hello': true,
+    'error': props.isError
+  });
 
   return (
     <div>
